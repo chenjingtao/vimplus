@@ -13,7 +13,6 @@ then
         sudo apt-get remove -y vim vim-runtime gvim
         sudo apt-get remove -y vim-tiny vim-common vim-gui-common vim-nox
 
-        sudo rm -rf ~/vim
         sudo rm -rf /usr/share/vim/vim74
         sudo rm -rf /usr/share/vim/vim80
         git clone https://github.com/vim/vim.git ~/vim
@@ -61,6 +60,8 @@ sudo rm -rf ~/.config/fontconfig/conf.d/10-powerline-symbols.conf
 cp ./fonts/10-powerline-symbols.conf ~/.config/fontconfig/conf.d
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+export http_proxy=http://secure-proxy2.qualcomm.com:9090
 
 vim -c "PluginInstall" -c "q" -c "q"
 
